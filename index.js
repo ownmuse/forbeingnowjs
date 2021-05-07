@@ -17,7 +17,7 @@ bot.on("callback_query", function (query) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
-        let gameurl = "https://maxizhukov.github.io/telegram_game_front/";
+        let gameurl = "https://ownmuse.github.io/index.html#";
         bot.answerCallbackQuery({
             callback_query_id: query.id,
             url: gameurl
