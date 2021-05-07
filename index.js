@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 const gameName = "eslabqol";
 const queries = {};
 server.use(express.static(path.join(__dirname, 'eslabqol')));
-bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "This bot implements a T-Rex jumping game. Say /game if you want to play."));
+bot.onText(/help/, (msg) => bot.sendMessage(msg.from.id, "BOT @incapital_uz tomonidan ishga tushurilgan. Iltimos o'yinni boshlash uchun /start so'zini kiriting"));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
 bot.on("callback_query", function (query) {
     if (query.game_short_name !== gameName) {
